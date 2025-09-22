@@ -80,3 +80,6 @@ Run
       ├── App.jsx         # Main component for handling application routing
       ├── index.css       # Global styles and Tailwind CSS directives
       └── index.js        # Entry point for the React application
+
+
+### [Live link] : https://my-crypto-dashboard-oqgy.vercel.app/
