@@ -4,9 +4,8 @@ import { getCoinMarkets } from '../lib/api';
 import { formatCurrency, formatLargeNumber, formatPercentage } from '../lib/formatters';
 import { ArrowDown, ArrowUp } from 'lucide-react';
 import { Skeleton } from './ui/Skeleton';
-import { LineChart, Line, ResponsiveContainer } from 'recharts'; // Import chart components
+import { LineChart, Line, ResponsiveContainer } from 'recharts'; 
 
-// ... (TableHeader helper component remains the same)
 const TableHeader = ({ label, sortKey, currentSortKey, sortOrder, onSort }) => (
     <th
       className="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer select-none"
@@ -61,7 +60,6 @@ const AllCoinsTable = ({ searchQuery = '', preloadedData, isLoading: isLoadingPr
 
 
   const renderTableContent = () => {
-    // ... (Loading, Error, and Empty states remain the same)
     if (isLoading) {
         return Array.from({ length: 15 }).map((_, i) => (
           <tr key={i} className="border-b border-gray-200">
@@ -155,7 +153,6 @@ const AllCoinsTable = ({ searchQuery = '', preloadedData, isLoading: isLoadingPr
           {renderTableContent()}
         </tbody>
       </table>
-      {/* ... (Pagination logic remains the same) */}
       {!preloadedData && (
         <div className="p-4 flex justify-center items-center space-x-4">
           <button onClick={() => setPage(p => Math.max(1, p - 1))} disabled={page === 1 || isLoading} className="px-4 py-2 text-sm font-medium bg-gray-200 rounded disabled:opacity-50">Previous</button>
