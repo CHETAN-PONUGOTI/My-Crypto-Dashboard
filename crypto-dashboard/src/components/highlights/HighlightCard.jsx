@@ -9,11 +9,9 @@ const HighlightCard = ({ title, coins, isLoading, error }) => {
   }
 
   return (
-    // Added h-full, p-6, border, shadow-lg for better styling
     <div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200 h-full">
       <h3 className="font-bold text-lg mb-4">{title}</h3>
 
-      {/* Increased spacing between list items with space-y-4 */}
       <div className="space-y-4">
         {isLoading ? (
           Array.from({ length: 3 }).map((_, i) => (
@@ -29,7 +27,7 @@ const HighlightCard = ({ title, coins, isLoading, error }) => {
             </div>
           ))
         ) : (
-          coins?.slice(0, 5).map((coin) => ( // Show 5 items per card
+          coins?.slice(0, 5).map((coin) => ( 
             <div key={coin.id} className="flex items-center justify-between text-sm">
               <div className="flex items-center space-x-3">
                 <img src={coin.image} alt={coin.name} width={32} height={32} className="rounded-full" />
