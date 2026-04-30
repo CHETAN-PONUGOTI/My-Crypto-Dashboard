@@ -22,7 +22,6 @@ const TableHeader = ({ label, sortKey, currentSortKey, sortOrder, onSort }) => (
 
 
 const AllCoinsTable = ({ searchQuery = '', preloadedData, isLoading: isLoadingProp }) => {
-  // ... (All existing state and data fetching logic remains the same)
   const [page, setPage] = useState(1);
   const [sortKey, setSortKey] = useState('market_cap_rank');
   const [sortOrder, setSortOrder] = useState('asc');
