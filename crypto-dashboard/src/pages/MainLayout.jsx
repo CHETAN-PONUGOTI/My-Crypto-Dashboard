@@ -14,7 +14,6 @@ const MainLayout = () => {
     volume: globalStats?.total_volume?.usd,
   };
 
-  // This chart data can be improved with a dedicated timeseries endpoint
   const chartData = globalStats?.market_cap_percentage && Object.entries(globalStats.market_cap_percentage)
     .slice(0, 10)
     .map(([key, value]) => ({ name: key, value }));
@@ -35,7 +34,6 @@ const MainLayout = () => {
       <Navigation />
       
       <div className="mt-6">
-        {/* The Outlet is where the child routes (All Coins, Highlights, etc.) will be rendered */}
         <Outlet />
       </div>
     </>
