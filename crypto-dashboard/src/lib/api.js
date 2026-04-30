@@ -52,7 +52,6 @@ export const getGlobalStats = async () => {
 
 export const getCategoriesList = async () => {
   try {
-    // We now fetch the full categories endpoint, not just the list
     const response = await api.get('/coins/categories'); 
     return response.data;
   } catch (error) {
