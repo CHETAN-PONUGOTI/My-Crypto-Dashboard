@@ -11,14 +11,12 @@ function App() {
     <div className="container mx-auto p-4 md:p-8 bg-white">
       <main>
         <Routes>
-          {/* Main Layout Route */}
           <Route path="/" element={<MainLayout />}>
             <Route index element={<HomePage />} />
             <Route path="highlights" element={<HighlightsPage />} />
             <Route path="categories" element={<CategoriesPage />} />
           </Route>
           
-          {/* Category Detail Page has its own layout */}
           <Route path="/categories/:categoryId" element={<CategoryDetailPage />} />
         </Routes>
       </main>
